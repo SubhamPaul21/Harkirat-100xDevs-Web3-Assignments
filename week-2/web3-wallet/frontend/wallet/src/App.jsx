@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      Hello
+      <h2>Create Ethereum and Solana Wallets by Generating a Seed Phrase</h2>
     </>
   )
 }
