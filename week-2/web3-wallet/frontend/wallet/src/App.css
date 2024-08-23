@@ -6,7 +6,22 @@
 }
 
 .seed-phrase-box {
-  width: 65em;
+  width: 66em;
+  background-color: rgb(252, 252, 252);
+  color: black;
+  font-size: larger;
+  padding: 20px;
+  border: 5px solid black;
+}
+
+.wallet-div {
+  width: 82em;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.wallet-box {
+  width: 30em;
   background-color: rgb(252, 252, 252);
   color: black;
   font-size: larger;

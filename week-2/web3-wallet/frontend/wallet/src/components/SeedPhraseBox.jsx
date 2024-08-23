@@ -1,3 +1,4 @@
+import '../App.css';
 import PhraseBox from './PhraseBox';
 import generateSeedPhraseList from '../utils/generateSeedPhrase';
 import { Buffer } from 'buffer';
