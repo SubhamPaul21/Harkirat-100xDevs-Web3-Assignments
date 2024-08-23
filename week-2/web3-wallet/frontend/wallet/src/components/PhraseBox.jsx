@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import '../App.css'
 
 export default function PhraseBox({ phrase }) {
 
     return (
         <>
-            <span className="phrase-box">Hello</span>
+            <p className="phrase-box">{phrase}</p>
         </>
     )
 }
