@@ -12,13 +12,16 @@ function App() {
 
   return (
     <>
-      <h2>Create Ethereum and Solana Wallets by Generating a Seed Phrase</h2>
+      <h1>Create Ethereum and Solana Wallets by Generating a Seed Phrase</h1>
       <div className="seed-phrase-box">
-        {
-          seedPhraseList.map(seedPhrase => (
-            <PhraseBox phrase={seedPhrase} key={seedPhraseKey++} />
-          ))
-        }
+        <h2 style={{ margin: 0 }}>Secret Recovery Phrase</h2>
+        <div className="seed-phrase-div">
+          {
+            seedPhraseList.map(seedPhrase => (
+              <PhraseBox phrase={seedPhrase} key={seedPhraseKey++} />
+            ))
+          }
+        </div>
       </div>
     </>
   )
