@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.seed-phrase-box {
+#seed-phrase-box {
   width: 66em;
   background-color: rgb(252, 252, 252);
   color: black;
@@ -14,13 +14,33 @@
   border: 5px solid black;
 }
 
-.wallet-div {
+#seed-phrase-text-button-div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#seed-phrase-div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#seed-phrase-text {
+  margin: 0px;
+  display: inline;
+  position: absolute;
+}
+
+#seed-phrase-copy-button {
+  margin-left: auto;
+}
+
+#wallet-div {
   width: 82em;
   display: flex;
   justify-content: space-evenly;
 }
 
-.wallet-box {
+#wallet-box {
   width: 30em;
   background-color: rgb(252, 252, 252);
   color: black;
@@ -29,12 +49,7 @@
   border: 5px solid black;
 }
 
-.seed-phrase-div {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.phrase-box {
+#phrase-box {
   border: 2px solid black;
   padding: 10px;
 }

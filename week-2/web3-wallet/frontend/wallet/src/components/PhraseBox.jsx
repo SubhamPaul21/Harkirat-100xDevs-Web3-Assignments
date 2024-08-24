@@ -5,7 +5,7 @@ export default function PhraseBox({ phrase }) {
 
     return (
         <>
-            <p className="phrase-box">{phrase}</p>
+            <p id="phrase-box">{phrase}</p>
         </>
     )
 }

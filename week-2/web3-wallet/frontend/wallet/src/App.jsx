@@ -7,7 +7,7 @@ function App() {
     <>
       <h1>Create Ethereum and Solana Wallets by Generating a Seed Phrase</h1>
       <SeedPhraseBox />
-      <div className="wallet-div">
+      <div id="wallet-div">
         <WalletBox name={"Solana Wallets"} />
         <WalletBox name={"Ethereum Wallets"} />
       </div>

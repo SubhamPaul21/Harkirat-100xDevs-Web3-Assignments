@@ -15,7 +15,7 @@ const CopySeedPhraseButton = ({ seedPhraseList }) => {
 
     return (
         <>
-            <button onClick={handleCopy}>
+            <button id="seed-phrase-copy-button" onClick={handleCopy}>
                 {
                     copied ? "Copied!" : "Copy Seed Phrases"
                 }

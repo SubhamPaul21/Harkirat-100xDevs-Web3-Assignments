@@ -2,7 +2,7 @@ import '../App.css';
 
 export default function WalletBox({ name }) {
     return (
-        <div className="wallet-box">
+        <div id="wallet-box">
             <b>{name}</b>
         </div>
     )
