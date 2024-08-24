@@ -1,7 +1,7 @@
 import SeedPhraseBox from './components/SeedPhraseBox';
 import WalletBox from './components/WalletBox';
 
-function App() {
+const App = () => {
 
   return (
     <>
@@ -15,4 +15,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

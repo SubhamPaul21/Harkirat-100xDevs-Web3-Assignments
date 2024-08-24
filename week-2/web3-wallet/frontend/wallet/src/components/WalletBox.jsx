@@ -1,9 +1,11 @@
 import '../App.css';
 
-export default function WalletBox({ name }) {
+const WalletBox = ({ name }) => {
     return (
         <div id="wallet-box">
             <b>{name}</b>
         </div>
     )
 }
+
+export default WalletBox;

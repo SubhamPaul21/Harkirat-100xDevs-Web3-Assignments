@@ -4,7 +4,7 @@ import generateSeedPhraseList from '../utils/generateSeedPhrase';
 import { Buffer } from 'buffer';
 import CopySeedPhraseButton from './CopySeedPhraseButton';
 
-export default function SeedPhraseBox() {
+const SeedPhraseBox = () => {
     window.Buffer = Buffer;
     const seedPhraseList = generateSeedPhraseList();
 
@@ -24,3 +24,5 @@ export default function SeedPhraseBox() {
         </div>
     )
 }
+
+export default SeedPhraseBox;
