@@ -41,6 +41,8 @@
 }
 
 #wallet-box {
+  display: grid;
+  justify-content: space-around;
   width: 30em;
   background-color: rgb(252, 252, 252);
   color: black;
@@ -49,7 +51,19 @@
   border: 5px solid black;
 }
 
+#wallet-name {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+#create-wallet-btn {
+  margin-top: 10px;
+}
+
 #phrase-box {
   border: 2px solid black;
   padding: 10px;
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
 }
