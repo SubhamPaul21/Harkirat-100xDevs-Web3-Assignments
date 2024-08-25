@@ -1,11 +1,14 @@
-import DisplayPrivateKey from './DisplayPrivateKey';
+import PrivateKey from './PrivateKey';
 import '../App.css';
+import PublicKey from './PublicKey';
 
-const Wallet = () => {
+const Wallet = ({ privateKey, publicKey }) => {
     return (
         <div id="individual-wallet">
             <span style={{ textAlign: 'left', marginBottom: '10px' }}>Private Key:</span>
-            <DisplayPrivateKey privateKey={"e9873d79c6d87dc0fb6a5778633389f4453213303b0d0e4b82a6a40afde5f9b8"} />
+            <PrivateKey privateKey={privateKey} />
+            <span style={{ textAlign: 'left', marginBottom: '10px', marginTop: '10px' }}>Public Key:</span>
+            <PublicKey publicKey={publicKey} />
         </div>
     )
 }

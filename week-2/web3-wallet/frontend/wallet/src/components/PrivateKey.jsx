@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
-const DisplayPrivateKey = ({ privateKey }) => {
+const PrivateKey = ({ privateKey }) => {
     const [isPrivateKeyVisible, setIsPrivateKeyVisible] = useState(false);
     const hiddenPrivateKeyString = "***********************************************************";
 
@@ -13,8 +13,8 @@ const DisplayPrivateKey = ({ privateKey }) => {
 
     return (
         <div id='private-key-div'>
-            <div id="private-key-display-div">
-                <span id='private-key-span-text'>{isPrivateKeyVisible ? privateKey : hiddenPrivateKeyString}</span>
+            <div id="key-display-div">
+                <span id='key-span-text'>{isPrivateKeyVisible ? privateKey : hiddenPrivateKeyString}</span>
             </div>
             <FontAwesomeIcon id="eye-icon"
                 icon={isPrivateKeyVisible ? faEye : faEyeSlash}
@@ -25,4 +25,4 @@ const DisplayPrivateKey = ({ privateKey }) => {
     );
 }
 
-export default DisplayPrivateKey;
+export default PrivateKey;

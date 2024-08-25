@@ -92,10 +92,10 @@
 
 #eye-icon {
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
-#private-key-display-div {
+#key-display-div {
   overflow: hidden;
   padding: 10px;
   background-color: #f0f0f0;
@@ -104,9 +104,10 @@
   font-size: 15px;
   color: #333;
   line-height: 1.5;
+  margin-right: 5px;
 }
 
-#private-key-span-text {
+#key-span-text {
   text-align: left;
   margin-bottom: 10px;
   word-wrap: break-word;
