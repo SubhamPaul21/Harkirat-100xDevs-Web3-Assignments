@@ -83,6 +83,18 @@
   margin-bottom: 10px;
 }
 
+#private-key-div {
+  display: flex;
+  width: 22em;
+  align-items: center;
+  padding: 5px;
+}
+
+#eye-icon {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
 #private-key-display-div {
   overflow: hidden;
   padding: 10px;

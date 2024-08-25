@@ -1,4 +1,5 @@
 import DisplayPrivateKey from './DisplayPrivateKey';
+import '../App.css';
 
 const Wallet = () => {
     return (
