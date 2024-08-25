@@ -43,6 +43,7 @@
 #wallet-box {
   display: grid;
   justify-content: space-around;
+  justify-items: center;
   width: 30em;
   background-color: rgb(252, 252, 252);
   color: black;
@@ -58,6 +59,7 @@
 
 #create-wallet-btn {
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #phrase-box {
@@ -66,4 +68,17 @@
   background-color: blueviolet;
   color: white;
   font-weight: bold;
+}
+
+#individual-wallet {
+  display: grid;
+  justify-content: space-around;
+  width: 22em;
+  background-color: rgb(252, 252, 252);
+  color: black;
+  font-size: larger;
+  padding: 20px;
+  border: 2px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
