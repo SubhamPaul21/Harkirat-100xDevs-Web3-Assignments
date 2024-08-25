@@ -23,5 +23,5 @@ export const generateSolanaKeyPair = (seed, accountIndex) => {
     const secret = nacl.sign.keyPair.fromSeed(derivedSeed).secretKey;
     const privateKey = arrayToHex(secret.slice(0, 32));
     const publicKey = Keypair.fromSecretKey(secret).publicKey.toBase58();
-    return (privateKey, publicKey);
+    return [privateKey, publicKey];
 }

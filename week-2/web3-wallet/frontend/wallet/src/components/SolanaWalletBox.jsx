@@ -1,14 +1,27 @@
+import { useState } from 'react';
 import '../App.css';
 import Wallet from './Wallet';
+import { generateSeedFromMnemonic, generateSolanaKeyPair } from "../utils/cryptoWallet.js";
 
-const SolanaWalletBox = () => {
+const SolanaWalletBox = ({ mnemonic }) => {
+    const [solanaWalletIndex, setSolanaWalletIndex] = useState(1);
+    const [solanaWallets, setSolanaWallets] = useState([]);
+
+    const seed = generateSeedFromMnemonic(mnemonic);
+
+    const createSolanaWallet = () => {
+        const [privateKey, publicKey] = generateSolanaKeyPair(seed, solanaWalletIndex);
+        const newSolanaWallet = <Wallet privateKey={privateKey} publicKey={publicKey} solanaWalletIndex={solanaWalletIndex} />;
+        setSolanaWallets([...solanaWallets, newSolanaWallet]);
+        setSolanaWalletIndex(solanaWalletIndex + 1);
+    }
 
     return (
         <div id="wallet-box">
             <h3 id="wallet-name">Solana Wallets</h3>
-            <button id='create-wallet-btn'>Create SOL wallet</button>
+            <button id='create-wallet-btn' onClick={createSolanaWallet}>Create SOL wallet</button>
             <div id='sol-wallet-list'>
-                <Wallet privateKey={"e9873d79c6d87dc0fb6a5778633389f4453213303b0d0e4b82a6a40afde5f9b8"} publicKey={"04bfcab21370e2e4d79813f5c77c9b32e62d13b1245db9c908a2f29ab4b4ed44f5e1c3c9f3547ec6b0c86c6c4f12bcf317f4183dd6a1e9d9ed104aa9a4e94620f7"} />
+                {solanaWallets}
             </div>
         </div>
     )

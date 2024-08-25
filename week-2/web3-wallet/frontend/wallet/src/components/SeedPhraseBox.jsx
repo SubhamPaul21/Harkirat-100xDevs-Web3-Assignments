@@ -1,12 +1,11 @@
 import '../App.css';
 import PhraseBox from './PhraseBox';
-import generateSeedPhraseList from "../utils/cryptoWallet";
-import { Buffer } from 'buffer';
+import { generateSeedPhraseList } from "../utils/cryptoWallet.js";
 import CopySeedPhraseButton from './CopySeedPhraseButton';
 
-const SeedPhraseBox = () => {
-    window.Buffer = Buffer;
-    const seedPhraseList = generateSeedPhraseList();
+const SeedPhraseBox = ({ mnemonic }) => {
+
+    const seedPhraseList = generateSeedPhraseList(mnemonic);
 
     return (
         <div id="seed-phrase-box">
