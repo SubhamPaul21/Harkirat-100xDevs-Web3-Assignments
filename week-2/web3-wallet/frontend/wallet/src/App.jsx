@@ -1,5 +1,6 @@
 import SeedPhraseBox from './components/SeedPhraseBox';
-import WalletBox from './components/WalletBox';
+import SolanaWalletBox from './components/SolanaWalletBox';
+import EthereumWalletBox from './components/EthereumWalletBox';
 
 const App = () => {
 
@@ -8,8 +9,8 @@ const App = () => {
       <h1>Create Ethereum and Solana Wallets by Generating a Seed Phrase</h1>
       <SeedPhraseBox />
       <div id="wallet-div">
-        <WalletBox name={"Solana"} />
-        <WalletBox name={"Ethereum"} />
+        <SolanaWalletBox />
+        <EthereumWalletBox />
       </div>
     </>
   )
