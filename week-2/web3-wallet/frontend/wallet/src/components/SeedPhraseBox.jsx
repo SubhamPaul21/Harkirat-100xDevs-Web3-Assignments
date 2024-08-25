@@ -1,6 +1,6 @@
 import '../App.css';
 import PhraseBox from './PhraseBox';
-import generateSeedPhraseList from '../utils/generateSeedPhrase';
+import generateSeedPhraseList from "../utils/cryptoWallet";
 import { Buffer } from 'buffer';
 import CopySeedPhraseButton from './CopySeedPhraseButton';
 
