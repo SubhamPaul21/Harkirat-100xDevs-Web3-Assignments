@@ -1,18 +1,30 @@
+import { useState } from 'react';
 import '../App.css';
-import Wallet from './Wallet';
+import Wallet from './Wallet.jsx';
+import { generateSeedFromMnemonic, generateEthereumKeyPair } from "../utils/cryptoWallet.js";
 
-const EthereumWalletBox = () => {
+const EthereumWalletBox = ({ mnemonic }) => {
+    const [EthereumWalletIndex, setEthereumWalletIndex] = useState(1);
+    const [EthereumWallets, setEthereumWallets] = useState([]);
+
+    const seed = generateSeedFromMnemonic(mnemonic);
+
+    const createEthereumWallet = () => {
+        const [privateKey, publicKey] = generateEthereumKeyPair(seed, EthereumWalletIndex);
+        const newEthereumWallet = <Wallet privateKey={privateKey} publicKey={publicKey} walletIndex={EthereumWalletIndex} key={EthereumWalletIndex} />;
+        setEthereumWallets([...EthereumWallets, newEthereumWallet]);
+        setEthereumWalletIndex(EthereumWalletIndex + 1);
+    }
+
     return (
         <div id="wallet-box">
             <h3 id="wallet-name">Ethereum Wallets</h3>
-            <button id='create-wallet-btn'>Create ETH wallet</button>
-            <div id='eth-wallet-list'>
-                {/* <Wallet privateKey={"e9873d79c6d87dc0fb6a5778633389f4453213303b0d0e4b82a6a40afde5f9b8"} publicKey={"04bfcab21370e2e4d79813f5c77c9b32e62d13b1245db9c908a2f29ab4b4ed44f5e1c3c9f3547ec6b0c86c6c4f12bcf317f4183dd6a1e9d9ed104aa9a4e94620f7"} /> */}
+            <button id='create-wallet-btn' onClick={createEthereumWallet}>Create ETH wallet</button>
+            <div id='wallet-list'>
+                {EthereumWallets}
             </div>
         </div>
     )
 }
-
-
 
 export default EthereumWalletBox;
