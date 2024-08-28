@@ -42,7 +42,6 @@
 
 #wallet-box {
   display: grid;
-  justify-content: space-around;
   justify-items: center;
   width: 30em;
   background-color: rgb(252, 252, 252);
@@ -55,11 +54,13 @@
 #wallet-name {
   margin-top: 0px;
   margin-bottom: 10px;
+  height: 30px;
 }
 
 #create-wallet-btn {
   /* margin-top: 10px; */
   margin-bottom: 10px;
+  height: 50px;
 }
 
 #phrase-box {

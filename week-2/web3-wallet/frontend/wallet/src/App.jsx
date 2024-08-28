@@ -14,8 +14,13 @@ const App = () => {
       <h1>Create Ethereum and Solana Wallets by Generating a Seed Phrase</h1>
       <SeedPhraseBox mnemonic={mnemonic} />
       <div id="wallet-div">
-        <SolanaWalletBox mnemonic={mnemonic} />
-        <EthereumWalletBox />
+        <div>
+          <SolanaWalletBox mnemonic={mnemonic} />
+        </div>
+        <div>
+          <EthereumWalletBox />
+
+        </div>
       </div>
     </>
   )

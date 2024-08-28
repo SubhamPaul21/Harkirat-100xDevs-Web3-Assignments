@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import '../App.css';
-import Wallet from './Wallet';
+import Wallet from './Wallet.jsx';
 import { generateSeedFromMnemonic, generateSolanaKeyPair } from "../utils/cryptoWallet.js";
 
 const SolanaWalletBox = ({ mnemonic }) => {
@@ -11,7 +11,7 @@ const SolanaWalletBox = ({ mnemonic }) => {
 
     const createSolanaWallet = () => {
         const [privateKey, publicKey] = generateSolanaKeyPair(seed, solanaWalletIndex);
-        const newSolanaWallet = <Wallet privateKey={privateKey} publicKey={publicKey} solanaWalletIndex={solanaWalletIndex} />;
+        const newSolanaWallet = <Wallet privateKey={privateKey} publicKey={publicKey} walletIndex={solanaWalletIndex} key={solanaWalletIndex} />;
         setSolanaWallets([...solanaWallets, newSolanaWallet]);
         setSolanaWalletIndex(solanaWalletIndex + 1);
     }
@@ -20,7 +20,7 @@ const SolanaWalletBox = ({ mnemonic }) => {
         <div id="wallet-box">
             <h3 id="wallet-name">Solana Wallets</h3>
             <button id='create-wallet-btn' onClick={createSolanaWallet}>Create SOL wallet</button>
-            <div id='sol-wallet-list'>
+            <div id='wallet-list'>
                 {solanaWallets}
             </div>
         </div>
