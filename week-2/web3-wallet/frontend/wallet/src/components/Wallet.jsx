@@ -1,6 +1,7 @@
 import PrivateKey from './PrivateKey';
 import '../App.css';
 import PublicKey from './PublicKey';
+import Balance from './Balance';
 
 const Wallet = ({ privateKey, publicKey, walletIndex }) => {
     return (
@@ -10,6 +11,7 @@ const Wallet = ({ privateKey, publicKey, walletIndex }) => {
             <PrivateKey privateKey={privateKey} />
             <span style={{ textAlign: 'left', marginBottom: '10px', marginTop: '10px' }}>Public Key:</span>
             <PublicKey publicKey={publicKey} />
+            <Balance publicKey={publicKey} />
         </div>
     )
 }

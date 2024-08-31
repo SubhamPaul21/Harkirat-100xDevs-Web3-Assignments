@@ -5,10 +5,10 @@ import { useState } from 'react';
 import { Buffer } from 'buffer';
 import { getMnemonic } from './utils/cryptoWallet.js';
 
-
 const App = () => {
   window.Buffer = Buffer;
   const [mnemonic] = useState(getMnemonic());
+
   return (
     <>
       <h1>Create Ethereum and Solana Wallets by Generating a Seed Phrase</h1>
